@@ -21,8 +21,8 @@ def main():
         re.append(adr[i])
 
     i=0
-    while k!=1 and i<n-n%k:
-        re[i]=adr[k-i%k-1+int(i/k)*k]
+    while k!=1 and i<n-n%k: # 不足k值的组不处理
+        re[i]=adr[k-i%k-1+int(i/k)*k] # k=k-i + i int(i/k)*k 决定了第几次k
         i+=1
 
     for i in range(n-1):
