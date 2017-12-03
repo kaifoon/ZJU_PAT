@@ -8,14 +8,14 @@ class HashNode():
 
 def CreateHashTbl():
     H = []
-    for i in range(4):
+    for i in range(10**4):
         H.append(HashNode())
     return H
 
 
 def InsertHashTal(hashtable, p1):
 
-    addr1 = int(p1[-1:]) % 9
+    addr1 = int(p1[-5:]) % 9999
     if not hashtable[addr1].data:
         hashtable[addr1].data = p1
         hashtable[addr1].count += 1
